@@ -11,7 +11,7 @@ function createMyObject() {
 };
 //console.log(createMyObject());
 
-
+//Object Updater
 function updateObject (obj) {
     obj.foo = 'foo';
     obj.bar = 'bar';
@@ -30,4 +30,11 @@ function personMaker() {
         }
   };
   return person;
+}
+
+//Deleting Keys
+function keyDeleter(obj) {
+    delete obj.foo;
+    delete obj.bar;
+    return obj;
 }
