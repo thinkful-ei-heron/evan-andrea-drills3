@@ -23,3 +23,9 @@ const obj = {
 for (const key in obj) {
   console.log(obj);
 }
+
+//Arrays in Objects
+const obj2 = {
+  meals: ['breakfast', 'second breakfast', 'elevenses', 'lunch', 'afternoon tea', 'dinner', 'supper']
+}
+ console.log(obj2.meals[3]);
