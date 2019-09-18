@@ -36,3 +36,10 @@ studentData2 = [
       course: 'Computer science',
     },
   ];
+
+  //Find by id
+  const data = [{id: 1, foo: 'bar'}, {id: 2, foo: 'bizz'}];
+
+  function findById (items, idNum) {
+    return items.find (item => item.id === idNum);
+  }
