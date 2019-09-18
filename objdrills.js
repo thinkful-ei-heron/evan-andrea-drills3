@@ -61,5 +61,32 @@ for(let key in obj4) {
   
 }
 
+//Cracking the code
+let cipher = {
+  a: 2,
+  b: 3,
+  c: 4,
+  d: 5
+  }
 
-console.log(...allPeople2);
+const encoded = 'craft block argon meter bells brown croon droop'
+
+function decode (encoded) {
+  let final = '';
+  let encodedString = encoded.split (' ');
+  for (let i=0; i < encodedString.length; i++) {
+    let letter = encodedString[i][0];
+    if (cipher[letter]){
+      final += encodedString[i][cipher[letter]-1];
+    }
+    else
+      final +=' ';
+  };
+  return final;
+}
+
+function decodeWords (message, decode) {
+  return decode(message);
+}
+
+console.log(decodeWords(encoded,decode));
