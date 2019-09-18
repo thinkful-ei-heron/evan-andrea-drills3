@@ -11,7 +11,7 @@ function createMyObject() {
 };
 //console.log(createMyObject());
 
-
+//Object Updater
 function updateObject (obj) {
     obj.foo = 'foo';
     obj.bar = 'bar';
@@ -26,7 +26,8 @@ function personMaker() {
         firstName: 'Jane',
         lastName: 'Doe',
         fullName: function () {
-            console.log(`${this.firstName} ${this.lastName}`);
+            return this.firstName + " " + this.lastName;
         }
-    }
+  };
+  return person;
 }
