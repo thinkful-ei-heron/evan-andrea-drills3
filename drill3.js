@@ -26,7 +26,8 @@ function personMaker() {
         firstName: 'Jane',
         lastName: 'Doe',
         fullName: function () {
-            console.log(`${this.firstName} ${this.lastName}`);
+            return this.firstName + " " + this.lastName;
         }
-    }
+  };
+  return person;
 }
