@@ -21,7 +21,7 @@ const obj = {
 }
 
 for (const key in obj) {
-  console.log(obj);
+  console.log(key,obj[key]);
 }
 
 //Arrays in Objects
@@ -45,3 +45,21 @@ for(let key in obj3) {
 }
 
 console.log(...allPeople);
+
+//Properties that aren't there
+const obj4 = [
+  {name: 'Jane', jobTitle: 'Accountant', boss: 'Jon'},
+  {name: 'Bob', jobTitle: 'Firefighter', boss: 'Dave'},
+  {name: 'Jim', jobTitle: 'Sales', boss: 'Michael'}
+]
+
+let allPeople2 = [];
+
+for(let key in obj4) {
+  allPeople2.push(obj4[key])
+  console.log(`${obj4[key].jobTitle} ${obj4[key].name} reports to ${obj4[key].boss}.`);
+  
+}
+
+
+console.log(...allPeople2);
