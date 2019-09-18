@@ -20,4 +20,13 @@ function updateObject (obj) {
     return obj;
 }
 
-
+//Self-reference
+function personMaker() {
+    let person = {
+        firstName: 'Jane',
+        lastName: 'Doe',
+        fullName: function () {
+            console.log(`${this.firstName} ${this.lastName}`);
+        }
+    }
+}
