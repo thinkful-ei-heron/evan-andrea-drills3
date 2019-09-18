@@ -90,3 +90,43 @@ function decodeWords (message, decode) {
 }
 
 console.log(decodeWords(encoded,decode));
+
+//Factory Functions with LOTR
+function createCharacter(name, nickname, race, origin, attack, defense) {
+  return {
+    name: name,
+    nickname: nickname,
+    race: race,
+    origin: origin,
+    attack: attack,
+    defense: defense,
+    describe: function () {
+      console.log(`${name} is a ${race} from ${origin}`);
+    },
+    evaluateFight: function(character) {
+      let x= this.attack - character.defense;
+      let y= character.attack - this.defense;
+      if(x<0) { x=0;
+      } if (y < 0) { y=0;
+      }
+      console.log(`Your opponent takes ${x} damage and you receive ${y} damage`)
+    }
+  };
+}
+
+const characters = [
+  createCharacter('Gandalf the white', 'gandalf', 'Wizard', 'Middle Earth', 10, 6),
+  createCharacter('Bilbo Baggins', 'bilbo', 'Hobbit', 'The Shire', 2, 1),
+  createCharacter('Frodo Baggins', 'frodo', 'Hobbit', 'The Shire', 3, 2),
+  createCharacter('Aragorn son of Arathorn', 'aragorn', 'Man', 'Dunnedian', 6, 8),
+  createCharacter('Legolas', 'logolas', 'Elf', 'Woodland Realm', 8, 5)];
+
+
+characters.push(createCharacter('Arwen', 'Undomiel', 'Half-Elf', 'Rivendell', 9,1));
+
+characters.find(man => man.nickname === 'aragorn').describe ();
+
+characters.filter(organism => organism.race === 'Hobbit');
+
+characters.filter(organism => organism.attack > 5);
+
